@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json()); //get the req/res in json only
 app.use(morgan('dev')); //  log the request in terminal
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public/dist'));
 var api = require('./app/routes/api')(app, express, io);
 app.use('/api', api);
 
@@ -33,7 +33,7 @@ app.use('/api', api);
 
 app.get("*", function(req, res) {
     //    res.sendFile(__dirname+'/public/app/views/index.html');
-    res.sendFile(__dirname + '/public/app/index.html');
+    res.sendFile(__dirname + '/public/dist/index.html');
 
 });
 http.listen(config.port, function(err) {
