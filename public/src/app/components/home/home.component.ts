@@ -14,6 +14,8 @@ export class HomeComponent implements OnInit {
   gamesData:gameData[];
   filteredItems:gameData[];
 
+  Asc_OR_Dsc:boolean;
+
   constructor(
 
 	public flashMessage:FlashMessagesService,
@@ -70,6 +72,53 @@ export class HomeComponent implements OnInit {
 
    
    
+
+  }
+
+  sortGameData(){
+
+  	//Sort the Game Data based on the score here ..
+  	//If it is ascending order sort it in descending else vice versa logic wil be applied here
+  	if(this.Asc_OR_Dsc==true){
+		  	this.filteredItems.sort((score1,score2)=>{
+
+
+		  			if (score1.score < score2.score ){
+			    		return -1;
+			   		 }
+			   		 else if( score1.score > score2.score ){
+			        	return 1;
+			    	}
+			    	else{
+			    		return 0;	
+			    }
+		  	});
+
+		  this.Asc_OR_Dsc=false;
+  }
+  else{
+
+  		this.filteredItems.sort((score1,score2)=>{
+
+
+		  			if (score1.score > score2.score ){
+			    		return -1;
+			   		 }
+			   		 else if( score1.score < score2.score ){
+			        	return 1;
+			    	}
+			    	else{
+			    		return 0;	
+			    }
+		  	});
+
+  		this.Asc_OR_Dsc=true;
+
+
+
+  }
+
+
 
   }
 

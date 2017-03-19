@@ -4,6 +4,11 @@
             <div class="col-md-10">
                 <!-- Search by Title Functionality is currently provided right now-->
                 <input type="text" #searchText placeholder="Search(by Name)" name="search" class="form-control" (input)="filterGameData(searchText.value)" />
+
+
+            </div>
+            <div class="col-md-2">
+            <img src="assets/image/acssort.png" [ngClass]="{Asc: Asc_OR_Dsc, Dsc: !Asc_OR_Dsc}" (click)="sortGameData()" alt="Sort Data" height="40px" width="50px"/>
             </div>
         </div>
     </div>
