@@ -1,13 +1,13 @@
 <div class="jumbotron text-center">
     <div class="container">
         <div class="row">
-            <div class="col-md-10">
+            <div class="col-md-10 col-sm-8 col-xs-8 col-lg-10">
                 <!-- Search by Title Functionality is currently provided right now-->
                 <input type="text" #searchText placeholder="Search(by Name)" name="search" class="form-control" (input)="filterGameData(searchText.value)" />
 
 
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2 col-sm-4 col-xs-4 col-lg-2">
             <img src="assets/image/acssort.png" [ngClass]="{Asc: Asc_OR_Dsc, Dsc: !Asc_OR_Dsc}" (click)="sortGameData()" alt="Sort Data" height="40px" width="50px"/>
             </div>
         </div>
@@ -23,10 +23,10 @@
                        
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-4 col-xs-4">
                                     <img src="assets/image/LBPVista.jpg" class="img-responsive" alt="Product Image" height="150px" width="120px" />
                                 </div>
-                                <div class="col-md-8">
+                                <div class="col-md-8 col-sm-8 col-xs-8">
 
                                     <p class="heading text-info">{{filteredItems[i].title}}
 
@@ -42,10 +42,10 @@
                             </div>
                             <hr/>
                             <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-6 col-xs-6">
                              <p><b>Genre:  </b><span class="text-warning">{{filteredItems[i].genre}}</span></p>
                               </div>
-                              <div class="col-md-6 " >
+                              <div class="col-md-6 col-sm-6 col-xs-6" >
                               <p class="text-muted score">{{filteredItems[i].score}}</p>
                               </div>
                             </div>
@@ -63,10 +63,10 @@
                        
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-4 col-xs-4">
                                     <img src="assets/image/DDneon.jpg"  class="img-responsive" alt="Product Image" height="150px" width="120px" />
                                 </div>
-                                <div class="col-md-8">
+                                <div class="col-md-8 col-sm-8 col-xs-8">
 
                                     <p class="heading text-info">{{filteredItems[i+1].title}}</p>
                                     
@@ -78,10 +78,10 @@
                             </div>
                             <hr/>
                             <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-6 col-xs-6">
                              <p><b>Genre:  </b><span class="text-warning">{{filteredItems[i+1].genre}}</span></p>
                               </div>
-                              <div class="col-md-6 " >
+                              <div class="col-md-6 col-sm-6 col-xs-6 " >
                               <p class="text-muted score">{{filteredItems[i+1].score}}</p>
                               </div>
                             </div>
@@ -100,10 +100,10 @@
                        
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-4 col-xs-4">
                                     <img src="assets/image/NHL13.jpeg" class="img-responsive" alt="Product Image" height="150px" width="120px" />
                                 </div>
-                                <div class="col-md-8">
+                                <div class="col-md-8 col-sm-8 col-xs-8">
 
                                     <p class="heading text-info">{{filteredItems[i+2].title}}</p>
                                     
@@ -115,10 +115,10 @@
                             </div>
                             <hr/>
                             <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-6 col-xs-6">
                              <p><b>Genre:  </b><span class="text-warning">{{filteredItems[i+2].genre}}</span></p>
                               </div>
-                              <div class="col-md-6 " >
+                              <div class="col-md-6 col-sm-6 col-xs-6" >
                               <p class="text-muted score">{{filteredItems[i+2].score}}</p>
                               </div>
                             </div>

@@ -55,6 +55,15 @@ export class HomeComponent implements OnInit {
   	this.filteredItems = Object.assign([], this.gamesData);
   }
 
+  // getAutoCompleteArray(){
+
+  // 	this.sourceTextAutoComplete=this.filteredItems.map(data=>{
+
+  // 		return data.title;
+
+  // 	});
+  // }
+
 
   filterGameData(searchedText:string){
 
