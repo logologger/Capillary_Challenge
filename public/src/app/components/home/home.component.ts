@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
 
 
   gamesData:gameData[];
+  filteredItems:gameData[];
 
   constructor(
 
@@ -40,9 +41,35 @@ export class HomeComponent implements OnInit {
 			*/
 
 			this.gamesData=gameData;
+			this.assignCopy();
+			
 
 			// console.log(JSON.stringify(gameData));
 	});
+
+  }
+
+  assignCopy(){
+  	this.filteredItems = Object.assign([], this.gamesData);
+  }
+
+
+  filterGameData(searchedText:string){
+
+  	if(!searchedText) 
+  		this.assignCopy(); //when nothing has typed
+
+  	
+   this.filteredItems = Object.assign([], this.gamesData).filter(
+
+      item => (item.title.toLowerCase().indexOf(searchedText.toLowerCase()) > -1)
+   )
+
+   console.log(JSON.stringify(this.filteredItems));
+
+
+   
+   
 
   }
 

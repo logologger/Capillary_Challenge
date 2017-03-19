@@ -1,0 +1,13 @@
+.capheader {
+    float: left;
+    font-weight: 900;
+    font-size:20px;
+    color:#62f442;
+    /*margin-top: 1%;*/
+    margin-left: 1%;
+}
+
+.imgcap {
+   margin-top:-1%;
+    float: left;
+}
